@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getBasePath } from '@/lib/getBasePath';
 import Link from "next/link";
 
 export default function page(params) {
@@ -26,7 +27,7 @@ export default function page(params) {
                         },
                       ].map( (value, index) => {
                         return <Link href={value.link} className='px-2 py-1 bg-foreground_third border border-border rounded-md flex gap-1 hover:bg-foreground_secondary duration-75'>
-                          <Image src={"/Logos/" + value.name + ".svg"} width={24} height={24} alt={value.name}/>
+                          <Image src={getBasePath() + "/Logos/" + value.name + ".svg"} width={24} height={24} alt={value.name}/>
                           <span className='inline'>{value.name}</span>
                         </Link>
                       } )
@@ -103,7 +104,7 @@ export default function page(params) {
 
                         <button className='bg-primary py-2 rounded-md text-xl duration-200 font-semibold hover:brightness-90 ring-2 ring-primary group shadow-[0_0_15px_4px_var(--primary)] hover:shadow-[0_0_20px_12px_var(--primary),0_0_0_4px_rgba(0,0,0,0.10)] transform'>
                           Send
-                          <Image src="/Icons/envelope.svg" width={20} height={20} className='inline ml-3 -translate-y-0.5 group-hover:translate-x-3 group-hover:rotate-90 duration-200' />
+                          <Image src={getBasePath() + "/Icons/envelope.svg"} width={20} height={20} className='inline ml-3 -translate-y-0.5 group-hover:translate-x-3 group-hover:rotate-90 duration-200' />
                         </button>
                     </div>
                 </form>

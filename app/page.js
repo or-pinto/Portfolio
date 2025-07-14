@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getBasePath } from '@/lib/getBasePath';
 import Link from "next/link";
 
 import Project from "@/components/Project.jsx"
@@ -119,7 +120,7 @@ export default function Home() {
               {
                 ['Next', 'React', 'HTML', 'CSS', 'JavaScript', 'Node.js', 'PHP', 'MySQL', 'Express', 'MongoDB', 'Tailwind CSS', 'Lua', 'Java', 'C++', 'Python', 'GitHub', 'Visual Studio Code'].map((value, index) => {
                   return <button key={index} className='flex md:w-52 h-10 px-2 rounded-md bg-foreground_third border border-border lg:w-60'>
-                    <Image src={'/Logos/' + value + '.svg'} width='25' height='25' className='' alt='Display'/>
+                    <Image src={getBasePath() + '/Logos/' + value + '.svg'} width='25' height='25' className='' alt='Display'/>
                     <p className='self-center w-full text-right px-2 font-bold hidden md:block'>{value}</p>
                   </button>
                 })

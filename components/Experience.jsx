@@ -1,5 +1,7 @@
+
 import React from 'react';
 import Image from 'next/image';
+import { getBasePath } from '@/lib/getBasePath';
 
 export default function Experience({ name, company, description, period, image_type, up_arrow }) {
     /* 
@@ -18,13 +20,13 @@ export default function Experience({ name, company, description, period, image_t
                 up_arrow ? <></>
                 : <div className='size-fit rounded-[50%]'>
                     <div className='absolute bg-green-500 rounded-full size-full scale-50'></div>
-                    <Image src="/Icons/circle.svg" width="20" height="20" className='animate-ping'/>
+                    <Image src={getBasePath() + "/Icons/circle.svg"} width="20" height="20" className='animate-ping'/>
                 </div>
             }
         </div>
         
         <div className='min-w-[50px]'>
-            <Image src={"/Logos/" + company + "." + image_type} width="50" height="50" className=''/>
+            <Image src={getBasePath() + "/Logos/" + company + "." + image_type} width="50" height="50" className=''/>
         </div>
         <div className=']'>
             <h3 className='text-xl font-bold'>{name}</h3>

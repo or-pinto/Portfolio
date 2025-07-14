@@ -26,7 +26,7 @@ export default function Project(params) {
                     { 
                         params.usage.map( (value, index) => {
                             return <div className='h-[27px] bg-border px-2 pr-2 py-1 rounded-md flex w-fit'>
-                                <Image alt="Logo" src={'/Logos/' + value + '.svg'} width="18" height="18"/>
+                                <Image alt="Logo" src={'/Portfolio/Logos/' + value + '.svg'} width="18" height="18"/>
                                 <span className='text-sm font-semibold ml-2 hidden md:block'>{value}</span>   
                             </div>
                         })

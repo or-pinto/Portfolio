@@ -3,6 +3,7 @@ import "./globals.css";
 import Link from "next/link";
 
 import Image from "next/image";
+import { getBasePath } from '@/lib/getBasePath';
 
 const encodeSans = Encode_Sans({
   variable: "--font-encode-sans",
@@ -30,7 +31,7 @@ export default function RootLayout({ children }) {
                 return (
                   <Link href={path} key={key}>
                     <button className={'group flex-row gap-2 items-center justify-center bg-border rounded-md px-1 w-12 sm:w-fit sm:px-8 h-12 self-center hover:bg-primary duration-150 flex'}>
-                      <Image src={"/Icons/" + value + ".svg"} width="20" height="20" className='sm:group-hover:mr-2 duration-200' alt=""/>
+                      <Image src={getBasePath() + "/Icons/" + value + ".svg"} width="20" height="20" className='sm:group-hover:mr-2 duration-200' alt=""/>
                       <span className='hidden sm:block'>{value}</span>
                     </button>
                   </Link>
@@ -41,7 +42,7 @@ export default function RootLayout({ children }) {
 
           <div className= 'h-full flex space-x-5 justify-end align-middle'>
             <Link href="/contact" className='group flex-row gap-2 items-center justify-center rounded-md self-center bg-primary px-5 h-12 flex duration-200 hover:shadow-[0_0_20px_12px_var(--primary),0_0_0_4px_rgba(0,0,0,0.10)] hover:brightness-90 shadow-[0_0_24px_4px_var(--primary)]'>
-              <Image src="/Icons/contact_me.svg" width="20" height="20" className='group-hover:rotate-45 duration-200' alt=""/>
+              <Image src={getBasePath() + "/Icons/contact_me.svg"} width="20" height="20" className='group-hover:rotate-45 duration-200' alt=""/>
               <span className='hidden sm:block'>Contact Me</span>
             </Link>
           </div>
