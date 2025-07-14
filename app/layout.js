@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
                 return (
                   <Link href={path} key={key}>
                     <button className={'group flex-row gap-2 items-center justify-center bg-border rounded-md px-1 w-12 sm:w-fit sm:px-8 h-12 self-center hover:bg-primary duration-150 flex'}>
-                      <Image src={getBasePath() + "/Icons/" + value + ".svg"} width="20" height="20" className='sm:group-hover:mr-2 duration-200' alt=""/>
+                      <Image src={getBasePath() + "/Icons/" + value.toLowerCase() + ".svg"} width="20" height="20" className='sm:group-hover:mr-2 duration-200' alt=""/>
                       <span className='hidden sm:block'>{value}</span>
                     </button>
                   </Link>
