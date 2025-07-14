@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: rgb(194, 75, 71);
+
+  --background: rgb(18, 18, 18);
+  --foreground: #ededed;
+  --border: rgb(40, 40, 40);
+
+  --foreground_secondary: rgb(75, 75, 75);
+  --text_secondary: rgb(105, 105, 105);
+  
+  --foreground_third: rgb();
+  --text_third: rgb(55, 55, 55);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: rgb(45, 67, 129);
+
+    --background: rgb(18, 18, 18);
+    --foreground: #ededed;
+    --border: rgb(40, 40, 40);
+
+    --foreground_secondary: rgb(55, 55, 55);
+    --text_secondary: rgb(125, 125, 125);
+    
+    --foreground_third: rgb(20, 20, 20);
+    --text_third: rgb(95, 95, 95);
+  }
+
+  body{
+    background-image: url('../public/dark/grid.svg') !important;
+    background-repeat: repeat;
+    background-size: 30px;
+    background-size: 30px;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
