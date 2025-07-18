@@ -49,10 +49,11 @@ export default function Home() {
 
                 {
                   name: "Commissions",
-                  value: "7400",
+                  value: "2200",
                   duration: 2,
-                  suffix: " NIS",
-                  description: "Minimum amount I earned in commissions as a teenager freelancer, about ~$2,200 USD."
+                  suffix: " USD",
+                  prefix: "$",
+                  description: "Minimum amount I earned in commissions as a teenager freelancer."
                 },
 
                 {
@@ -66,6 +67,7 @@ export default function Home() {
                 return <div key={index} className='group flex flex-col items-center justify-center bg-foreground_third border-border border px-2 py-3 rounded-md w-36'>
                   <span className='text-text_third text-sm font-semibold'>{value.name}</span>
                   <div>
+                    {value.prefix}
                     <Counter start={0} end={value.value} duration={value.duration}/>
                     {value.suffix}
                   </div>

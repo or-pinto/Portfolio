@@ -21,7 +21,7 @@ const commands = [
       { text: ' ', style: {} },
       { text: 'fetch', style: { color: '#61afef' } },
       { text: '(', style: { color: '#abb2bf' } },
-      { text: "'Or Pinto'", style: { color: '#98c379' } },
+      { text: "'.this'", style: { color: '#98c379' } },
       { text: ')', style: { color: '#abb2bf' } },
     ]
   },
@@ -123,8 +123,6 @@ export default function CommandPrompt() {
     };
   }, []);
 
-  // No hover logic needed; always face the mouse
-
   return (
     <div
       className="relative"
@@ -185,6 +183,11 @@ export default function CommandPrompt() {
               ))}
             </div>
           ))}
+
+          <div className='bg-foreground_secondary border border-border rounded-md w-full h-auto mt-2 px-3 py-2'>
+            <p className='text-foreground'>This was supposed to be a cool effect.</p>
+            <p className='text-text_secondary'>=== Code Execution Successful ===</p>
+          </div>
         </div>
       </div>
     </div>

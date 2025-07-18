@@ -19,7 +19,7 @@ export default function Experience({ name, company, description, period, image_t
             {
                 up_arrow ? <></>
                 : <div className='size-fit rounded-[50%]'>
-                    <div className='absolute bg-green-500 rounded-full size-full scale-50'></div>
+                    <div className='absolute bg-foreground rounded-full size-full scale-50'></div>
                     <Image src={getBasePath() + "/Icons/circle.svg"} width="20" height="20" className='animate-ping'/>
                 </div>
             }
